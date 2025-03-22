@@ -1,0 +1,11 @@
+flask
+flask-ngrok
+pyngrok
+requests
+aixplain
+gunicorn
+werkzeug
+speechrecognition
+openai
+pydub
+flask-cors
