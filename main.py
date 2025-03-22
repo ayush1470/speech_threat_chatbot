@@ -182,10 +182,17 @@ import subprocess
 from werkzeug.utils import secure_filename
 from pydub import AudioSegment
 
-os.environ["PATH"] += os.pathsep + r"C:\Program Files\ffmpeg-2025-03-20-git-76f09ab647-essentials_build\bin"
+# Load environment variables
+AIXPLAIN_API_KEY = os.getenv("AIXPLAIN_API_KEY")
+FFMPEG_PATH = os.getenv("FFMPEG_PATH")
 
-# Set API Key for aiXplain tools
-os.environ["AIXPLAIN_API_KEY"] = "1b77c0afde7a91f063092bdbad58a542970e5632d8d8ea18f10cbf977bae6920"
+# Ensure API key is set
+if not AIXPLAIN_API_KEY:
+    raise ValueError("Missing AIXPLAIN_API_KEY environment variable!")
+
+# Set FFmpeg Path if provided
+if FFMPEG_PATH:
+    os.environ["PATH"] += os.pathsep + FFMPEG_PATH
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend integration
