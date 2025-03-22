@@ -224,6 +224,10 @@ def convert_to_mp3(wav_path, mp3_path):
     ffmpeg_cmd = f'ffmpeg -i "{wav_path}" "{mp3_path}"'
     subprocess.run(ffmpeg_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Flask API is running!"}), 200
+
 # API route to process an uploaded audio file
 @app.route('/analyze-audio', methods=['POST'])
 def analyze_audio():
