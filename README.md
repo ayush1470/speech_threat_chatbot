@@ -1,6 +1,6 @@
 # Speech Threat Chatbot Model (Flask API for Speech-to-Threat Analysis)
 
-This Flask-based API processes audio files, converts speech to text, and analyzes the text for potential threats using an AI-powered chatbot. The system assigns a threat score (1 to 5) and detects potentially dangerous messages.
+This Flask-based API processes audio files, converts speech to text, and analyzes the text for potential threats using an AI-powered chatbot. The system assigns a threat score (1 to 5) and detects potentially dangerous messages. The chatbot also answers follow-up questions like generating Helpline numbers for women in India.
 
 ## Features
 - **Chatbot**: Generates responses to questions provided by user using Microsoft ChatGPT 3.5 LLM tool provided by aiXplain.
