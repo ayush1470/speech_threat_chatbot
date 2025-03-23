@@ -3,7 +3,8 @@
 This Flask-based API processes audio files, converts speech to text, and analyzes the text for potential threats using an AI-powered chatbot. The system assigns a threat score (1 to 5) and detects potentially dangerous messages.
 
 ## Features
-- **Speech-to-Text**: Converts audio files into text using AWS speech recognition.
+- **Chatbot**: Generates responses to questions provided by user using Microsoft ChatGPT 3.5 LLM tool provided by aiXplain.
+- **Speech-to-Text**: Converts audio files into text using AWS speech recognition tool provided by aiXplain.
 - **Threat Analysis**: AI-powered chatbot assesses threat levels in transcribed text.
 - **File Conversion**: Supports WAV, MP3, M4A, OGG formats and converts them to WAV/MP3.
 - **CORS Enabled**: Allows frontend integration.
